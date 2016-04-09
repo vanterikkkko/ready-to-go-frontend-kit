@@ -6,7 +6,6 @@
   flex-direction: column
   justify-content: center
   align-items: center
-
   position: fixed
   z-index: 200
 
@@ -17,38 +16,38 @@
     color: lighten($fl-lred, 10%)
     text-transform: uppercase
     font-size: 30px
-    margin-bottom: 20px
+    margin-bottom: 25px
 
     animation: -1s textBlink 1.2s infinite linear
 
-  .circle
-    height: 1px
+  #circle
     width: 1px
+    height: 1px
 
     display: block
     position: relative
 
     background-color: $fl-red
-    border-radius: 50%
 
+    border-radius: 50%
     border:
       top: 99px $fl-lred solid
       left: 99px $fl-red solid
       right: 99px $fl-red solid
       bottom: 99px $fl-lred solid
 
-    animation: -1s preloaderRotation 1s infinite linear
+    animation: -1s preloaderRotation 1.5s infinite linear
 
 @keyframes preloaderRotation
-  0%
+  from
     transform: rotateZ(0deg)
-  100%
+  to
     transform: rotateZ(360deg)
 
 @keyframes textBlink
-  from
-    opacity: 1
+  0%
+    color: lighten($fl-lred, 10%)
   50%
-    opacity: 0
-  to
-    opacity: 1
+    color: transparent
+  100%
+    color: lighten($fl-lred, 10%)
