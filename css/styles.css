@@ -3542,8 +3542,33 @@ body {
   z-index: 0;
   display: block;
   font-family: 'Roboto';
+  background-color: #c0392b;
+  color: white;
+  font-size: 21px;
 }
 
 body h1, body h2, body h3, body h4, body h5, body h6, body p {
   margin: 0;
+}
+
+#wrapper {
+  width: 96%;
+  max-width: 780px;
+  margin: 0 auto;
+  text-transform: lowercase;
+}
+
+#wrapper h1 {
+  margin: 30px;
+  text-transform: none;
+}
+
+#progress-line {
+  width: 5%;
+  height: 6px;
+  background-color: #fff;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
 }

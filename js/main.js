@@ -1,20 +1,22 @@
-function toggleClass(el, _class) {
-  if (el && el.className && el.className.indexOf(_class) >= 0) {
-    var pattern = new RegExp('\\s*' + _class + '\\s*');
-    el.className = el.className.replace(pattern, ' ');
-  }
-  else if (el){
-    el.className = el.className + ' ' + _class;
-  }
-  else {
-    console.log("Element not found :(")
-  }
-}
-
 window.onload = function(){
-  var navBtn = document.getElementById("nav-btn");
+  var progressLine = document.getElementById("progress-line"),
+      body = document.body,
+      html = document.documentElement,
+      viewportHeight = window.innerHeight;
 
-  navBtn.addEventListener("click", function(){
-    toggleClass(navBtn, "active")
-  }, false);
+  var documentHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+  var scrollTopValue = function(){
+    return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+  }
+
+  window.addEventListener("scroll", function(){
+    var scroll = scrollTopValue();
+    var progress = (scroll / (documentHeight - viewportHeight))*100;
+    progressLine.style.width = progress + "%";
+  });
+
+  window.addEventListener("resize", function(){
+    documentHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+  });
 }
