@@ -255,6 +255,10 @@ body h1, body h2, body h3, body h4, body h5, body h6, body p {
   margin: 0;
 }
 
+.none {
+  display: none;
+}
+
 #slider {
   width: 100vw;
   height: 100vh;
@@ -309,4 +313,9 @@ body h1, body h2, body h3, body h4, body h5, body h6, body p {
   position: absolute;
   display: block;
   z-index: 1;
+}
+
+.slide-el .slide-block {
+  background-repeat: no-repeat;
+  background-attachment: local;
 }
