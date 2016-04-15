@@ -2,7 +2,7 @@ var body, html, sliderBody, btnLeft, btnRight, i, parts,
     vHeight, vWidth, slide, slideBlock, slides
 //Variable definitions
 var i = 0,
-    parts = 1,
+    parts = 4,
 
     //Main html elements
     body = document.body,
