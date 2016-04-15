@@ -55,6 +55,46 @@
 
   z-index: 1
 
+  transform: translateX(100%)
+  transition: transform 0.5s
+
+  img
+    opacity: 0.5
+    &::selection
+      background-color: transparent
+  &::selection
+    background-color: transparent
+
+  &.opened
+    transform: translateX(0%)
+
+    .slide-block
+      left: 0
+
+    img
+      opacity: 1
+
   .slide-block
     background-repeat: no-repeat
     background-attachment: local
+
+    position: absolute
+    overflow: hidden
+
+    left: 100%
+
+    background-color: #000
+    background-size: cover
+
+    &::selection
+      background-color: transparent
+
+    img
+      min-height: 100vh
+      max-height: 100vh
+
+      position: relative
+      display: block
+
+      left: 50%
+      transform: translateX(-50%)
