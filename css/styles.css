@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&subset=latin,cyrillic);
 /*! normalize.css 2012-02-07T12:37 UTC - http://github.com/necolas/normalize.css */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
@@ -504,4 +505,42 @@ body {
 
 body h1, body h2, body h3, body h4, body h5, body h6, body p {
   margin: 0;
+}
+
+.holder {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  background-color: #c0392b;
+}
+
+input {
+  position: absolute;
+  display: block;
+  z-index: 2;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  width: 500px;
+  height: 50px;
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #e74c3c;
+}
+
+p#output {
+  font-size: 100px;
+  font-weight: 700;
+  color: black;
+  font-family: 'Playfair Display';
 }
